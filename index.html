@@ -1,0 +1,53 @@
+<!--Cursor In/Fuera
+    Marcelo Aceituno R
+    Full Stack JAVA 0034-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Cursor en/fuera</title>
+
+    <script>
+        $(document).ready(function (){
+
+            $('img').hover(function() {
+              
+                var src1=$(this).attr("src");
+                $(this).attr("src",$(this).attr("src-2"));
+                $(this).attr("src-2",src1);
+            
+            });
+        });
+    </script>  
+
+    <style>
+        div{
+            background-color: black;
+            width: 1035px;
+            height: 530px;
+        }
+        .imagenes{
+            width: 500px;
+            height: 250px;  
+            display: inline-block; 
+            border: solid 2px grey; 
+            margin: 5px;
+        }  
+
+    </style> 
+
+</head>
+
+<body>
+    <h1>Cursor en/fuera</h1><hr>
+    <div>
+        <img class="imagenes" src="imagenes\c01.png" src-2="imagenes\c02.png" src-3=""/>
+        <img class="imagenes" src="imagenes\clipper01.jpg" src-2="imagenes\clipper02.png" src-3=""/>
+        <img class="imagenes" src="imagenes\cobol01.png" src-2="imagenes\cobol02.png" src-3=""/>
+        <img class="imagenes" src="imagenes\pascal01.png" src-2="imagenes\pascal02.jpg" src-3=""/>
+    </div>
+</body>
+</html>
